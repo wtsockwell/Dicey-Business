@@ -1,6 +1,7 @@
-value=0;
+let value
 class Die{
     constructor(){
+        this.roll()
         this.value = $("<h1></h1>").text(value);
         this.div = $("<div class='die'></div>");
         $("#container").append(this.div);
