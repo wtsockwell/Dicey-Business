@@ -1,0 +1,13 @@
+.die{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
+
+}
+#container{
+    display:flex;
+    flex-wrap: wrap;
+}
