@@ -3,11 +3,12 @@ let dice = []
 class Die {
     constructor() {
         this.value = $("<h1></h1>");
-        this.div = $("<div class='die'></div>");
+        this.div = $(`<div class='die'></div>`);
         this.roll()
         $("#container").append(this.div);
         this.value.appendTo(this.div)
         this.change()
+        this.delete()
     }
     roll() {
         value = (Math.floor(Math.random() * 6) + 1)
@@ -16,6 +17,13 @@ class Die {
     change(){
         this.div.click(()=>{
             this.roll()
+        })
+    }
+    delete(){
+        this.div.dblclick(()=>{
+            let position = dice.indexOf(this)
+            this.div.remove()
+            dice.splice(position,1)
         })
     }
 }
